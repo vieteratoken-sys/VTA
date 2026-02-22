@@ -5,231 +5,218 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>VTA | Vietera Token Official</title>
 
-<meta name="description" content="Vietera Token (VTA) - AI-powered digital asset built on Solana Network. Limited supply. Transparent. Secure.">
+<meta name="description" content="VTA - Professional digital asset built on Solana. Fixed supply. Transparent.">
 <meta property="og:title" content="Vietera Token (VTA)">
-<meta property="og:description" content="Official website of Vietera Token on Solana Blockchain">
+<meta property="og:description" content="Official website of VTA on Solana blockchain">
 <meta property="og:type" content="website">
 
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 
 <style>
 body {
     font-family: 'Orbitron', sans-serif;
-    background: radial-gradient(circle at top, #0f172a, #000000);
-    overflow-x: hidden;
+    background: #0b0e11;
 }
-
-/* Animated background dots */
-canvas {
-    position: fixed;
-    top:0;
-    left:0;
-    z-index:-1;
-}
-
-.glow-blue { box-shadow: 0 0 20px #00f0ff; }
-.glow-purple { box-shadow: 0 0 20px #9333ea; }
-
 .card {
-    background: rgba(17,24,39,0.8);
-    backdrop-filter: blur(10px);
+    background: #161a20;
 }
+.glow { box-shadow: 0 0 15px #f0b90b; }
 </style>
 </head>
 
 <body class="text-white">
 
-<canvas id="bg"></canvas>
-
 <!-- HEADER -->
-<header class="fixed top-0 w-full bg-black bg-opacity-70 backdrop-blur-md py-3 px-6 flex justify-between items-center border-b border-gray-800 z-50">
+<header class="fixed top-0 w-full bg-[#0b0e11] border-b border-gray-800 py-4 px-8 flex justify-between items-center z-50">
 
-    <div class="text-xl font-bold text-cyan-400">VTA</div>
+    <div class="text-2xl font-bold text-yellow-400">VTA</div>
 
     <div class="flex items-center gap-4 text-sm">
-        <span class="text-gray-400 hidden md:block">Contract:</span>
-        <span id="contractAddress" class="text-cyan-400 text-xs md:text-sm break-all">
-            99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G
-        </span>
+        <span id="shortContract" class="text-yellow-400"></span>
 
         <button onclick="copyContract()" 
-            class="px-3 py-1 bg-cyan-500 rounded-lg text-xs glow-blue hover:scale-105 transition">
+            class="px-3 py-1 bg-yellow-500 text-black rounded hover:scale-105 transition text-xs">
             Copy
         </button>
 
         <a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G?cluster=mainnet-beta"
            target="_blank"
-           class="px-3 py-1 border border-cyan-400 rounded-lg text-xs hover:bg-cyan-600 transition">
+           class="px-3 py-1 border border-yellow-400 rounded text-xs hover:bg-yellow-500 hover:text-black transition">
            Explorer
         </a>
     </div>
-
 </header>
 
 
 <!-- HERO -->
-<section class="min-h-screen flex flex-col justify-center items-center text-center px-6 pt-32">
+<section class="pt-40 pb-24 text-center">
 
-    <h1 class="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
-        Vietera Token (VTA)
-    </h1>
+<h1 class="text-6xl font-extrabold text-yellow-400">
+Vietera Token (VTA)
+</h1>
 
-    <p class="mt-6 text-lg text-gray-300 max-w-2xl">
-        AI-powered digital asset built on the 
-        :contentReference[oaicite:0]{index=0} Network.
-        Limited supply. Transparent. Community driven.
-    </p>
-
-    <div class="mt-10 flex gap-4 flex-wrap justify-center">
-
-        <a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G?cluster=mainnet-beta"
-           target="_blank"
-           class="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl glow-blue hover:scale-105 transition text-lg font-bold">
-            View On Explorer
-        </a>
-
-        <a href="#whitepaper"
-           class="px-8 py-3 border border-purple-500 rounded-xl hover:bg-purple-600 glow-purple transition text-lg font-semibold">
-            Whitepaper
-        </a>
-
-    </div>
-
-</section>
-
-
-<!-- TOKENOMICS -->
-<section class="py-20 text-center">
-<h2 class="text-4xl font-bold mb-12">Tokenomics</h2>
-
-<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-
-<div class="card p-8 rounded-2xl border border-cyan-500">
-<h3 class="text-2xl text-cyan-400 font-bold">Total Supply</h3>
-<p class="mt-4 text-xl text-gray-300">5,000,000 VTA</p>
-</div>
-
-<div class="card p-8 rounded-2xl border border-purple-500">
-<h3 class="text-2xl text-purple-400 font-bold">Blockchain</h3>
-<p class="mt-4 text-xl text-gray-300">Solana Network</p>
-</div>
-
-<div class="card p-8 rounded-2xl border border-pink-500">
-<h3 class="text-2xl text-pink-400 font-bold">Liquidity</h3>
-<p class="mt-4 text-xl text-gray-300">Locked</p>
-</div>
-
-</div>
-</section>
-
-
-<!-- SECURITY -->
-<section class="py-20 bg-black bg-opacity-60 text-center">
-<h2 class="text-4xl font-bold mb-12">Security & Transparency</h2>
-
-<div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto px-6">
-
-<div class="card p-6 rounded-xl border border-green-500">
-<h4 class="text-xl font-bold text-green-400">Mint Authority</h4>
-<p class="mt-2 text-gray-400">Revoked</p>
-</div>
-
-<div class="card p-6 rounded-xl border border-blue-500">
-<h4 class="text-xl font-bold text-blue-400">Freeze Authority</h4>
-<p class="mt-2 text-gray-400">Disabled</p>
-</div>
-
-<div class="card p-6 rounded-xl border border-yellow-500">
-<h4 class="text-xl font-bold text-yellow-400">On-Chain Verification</h4>
-<p class="mt-2 text-gray-400">Verified on Solana Mainnet</p>
-</div>
-
-<div class="card p-6 rounded-xl border border-purple-500">
-<h4 class="text-xl font-bold text-purple-400">Supply</h4>
-<p class="mt-2 text-gray-400">Fixed & Limited</p>
-</div>
-
-</div>
-</section>
-
-
-<!-- UTILITY -->
-<section class="py-20 text-center">
-<h2 class="text-4xl font-bold mb-12">Utility</h2>
-<div class="max-w-4xl mx-auto text-gray-300 space-y-4">
-<p>• Online payment integration</p>
-<p>• Ecosystem expansion</p>
-<p>• Community rewards</p>
-<p>• Future staking & governance</p>
-</div>
-</section>
-
-
-<!-- WHITEPAPER -->
-<section id="whitepaper" class="py-20 bg-black bg-opacity-60 text-center">
-<h2 class="text-4xl font-bold mb-12">Whitepaper</h2>
-<p class="max-w-3xl mx-auto text-gray-300">
-Vietera Token is designed as a scalable digital asset built on Solana,
-focused on fast transactions, transparency and real-world payment utility.
+<p class="mt-6 text-gray-400 max-w-2xl mx-auto">
+AI-powered digital asset built on 
+:contentReference[oaicite:1]{index=1}.
+Fixed supply. On-chain verified. Designed for secure online payments.
 </p>
+
+<div class="mt-10 flex gap-6 justify-center flex-wrap">
+
+<a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G?cluster=mainnet-beta"
+   target="_blank"
+   class="px-8 py-3 bg-yellow-500 text-black rounded font-bold glow">
+Buy VTA
+</a>
+
+<a href="https://github.com/YOUR-USERNAME/VTA-Official"
+   target="_blank"
+   class="px-8 py-3 border border-gray-600 rounded hover:border-yellow-400 transition">
+GitHub
+</a>
+
+<a href="https://t.me/YOUR_TELEGRAM"
+   target="_blank"
+   class="px-8 py-3 border border-gray-600 rounded hover:border-yellow-400 transition">
+Telegram
+</a>
+
+</div>
+
 </section>
 
 
-<!-- QR -->
+<!-- STATS SECTION -->
+<section class="py-20 bg-[#111418]">
+<div class="max-w-6xl mx-auto px-6 grid md:grid-cols-4 gap-8 text-center">
+
+<div class="card p-6 rounded">
+<h4 class="text-gray-400 text-sm">Total Supply</h4>
+<p id="supply" class="text-2xl mt-2 text-yellow-400">Loading...</p>
+</div>
+
+<div class="card p-6 rounded">
+<h4 class="text-gray-400 text-sm">Holders</h4>
+<p id="holders" class="text-2xl mt-2 text-yellow-400">Loading...</p>
+</div>
+
+<div class="card p-6 rounded">
+<h4 class="text-gray-400 text-sm">Market Cap</h4>
+<p id="marketcap" class="text-2xl mt-2 text-yellow-400">Calculating...</p>
+</div>
+
+<div class="card p-6 rounded">
+<h4 class="text-gray-400 text-sm">Network</h4>
+<p class="text-2xl mt-2 text-yellow-400">Solana Mainnet</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- TOKEN DISTRIBUTION -->
 <section class="py-20 text-center">
-<h2 class="text-3xl font-bold mb-6">Scan Contract</h2>
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G">
+<h2 class="text-3xl font-bold text-yellow-400 mb-10">Token Distribution</h2>
+
+<div class="max-w-3xl mx-auto space-y-6">
+
+<div>
+<p class="text-gray-400 text-sm">Community 60%</p>
+<div class="w-full bg-gray-700 h-3 rounded">
+<div class="bg-yellow-500 h-3 rounded" style="width:60%"></div>
+</div>
+</div>
+
+<div>
+<p class="text-gray-400 text-sm">Liquidity 25%</p>
+<div class="w-full bg-gray-700 h-3 rounded">
+<div class="bg-yellow-500 h-3 rounded" style="width:25%"></div>
+</div>
+</div>
+
+<div>
+<p class="text-gray-400 text-sm">Development 15%</p>
+<div class="w-full bg-gray-700 h-3 rounded">
+<div class="bg-yellow-500 h-3 rounded" style="width:15%"></div>
+</div>
+</div>
+
+</div>
 </section>
 
 
-<footer class="py-10 text-center text-gray-500 border-t border-gray-800">
-© 2026 Vietera Token (VTA). All Rights Reserved.
+<!-- COMMUNITY LINKS -->
+<section class="py-20 bg-[#111418] text-center">
+<h2 class="text-3xl font-bold text-yellow-400 mb-8">Official Channels</h2>
+
+<div class="flex justify-center gap-10 flex-wrap">
+
+<a href="https://github.com/YOUR-USERNAME/VTA-Official"
+   target="_blank"
+   class="card px-8 py-6 rounded hover:border-yellow-400 border border-gray-700 transition">
+GitHub Repository
+</a>
+
+<a href="https://t.me/YOUR_TELEGRAM"
+   target="_blank"
+   class="card px-8 py-6 rounded hover:border-yellow-400 border border-gray-700 transition">
+Telegram Community
+</a>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-[#0b0e11] border-t border-gray-800 py-12 text-center text-gray-500 text-sm">
+<p>© 2026 Vietera Token (VTA). Built on Solana.</p>
+<p class="mt-3">Mint Authority: Revoked | Freeze Authority: Disabled | Liquidity: Locked</p>
 </footer>
 
 
 <script>
-function copyContract() {
-    const text = document.getElementById("contractAddress").innerText;
-    navigator.clipboard.writeText(text);
-    alert("Contract copied!");
+
+const CONTRACT = "99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G";
+document.getElementById("shortContract").innerText =
+CONTRACT.slice(0,4) + "..." + CONTRACT.slice(-4);
+
+function copyContract(){
+navigator.clipboard.writeText(CONTRACT);
+alert("Contract copied!");
 }
 
-/* Animated background */
-const canvas = document.getElementById("bg");
-const ctx = canvas.getContext("2d");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const connection = new solanaWeb3.Connection("https://api.mainnet-beta.solana.com");
+const mintPublicKey = new solanaWeb3.PublicKey(CONTRACT);
 
-let particles = [];
-for(let i=0;i<100;i++){
-    particles.push({
-        x:Math.random()*canvas.width,
-        y:Math.random()*canvas.height,
-        r:Math.random()*2,
-        d:Math.random()*1
-    })
+async function loadData(){
+const supply = await connection.getTokenSupply(mintPublicKey);
+const totalSupply = Number(supply.value.uiAmount);
+document.getElementById("supply").innerText =
+totalSupply.toLocaleString() + " VTA";
+
+const accounts = await connection.getParsedProgramAccounts(
+solanaWeb3.TOKEN_PROGRAM_ID,
+{
+filters: [
+{ dataSize: 165 },
+{ memcmp: { offset: 0, bytes: CONTRACT } }
+]
+}
+);
+
+document.getElementById("holders").innerText = accounts.length;
+
+// Demo price (bạn có thể thay bằng API Dexscreener sau)
+const demoPrice = 0.25;
+const marketCap = totalSupply * demoPrice;
+document.getElementById("marketcap").innerText =
+"$" + marketCap.toLocaleString();
 }
 
-function draw(){
-    ctx.clearRect(0,0,canvas.width,canvas.height);
-    ctx.fillStyle="#00f0ff";
-    particles.forEach(p=>{
-        ctx.beginPath();
-        ctx.arc(p.x,p.y,p.r,0,Math.PI*2,true);
-        ctx.fill();
-    })
-    update();
-}
+loadData();
 
-function update(){
-    particles.forEach(p=>{
-        p.y+=p.d;
-        if(p.y>canvas.height){p.y=0;}
-    })
-}
-
-setInterval(draw,33);
 </script>
 
 </body>
