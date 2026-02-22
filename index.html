@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vietera Token (VTA)</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+background:#0f0f1b;
+color:#fff;
+font-family:'Inter',sans-serif;
+line-height:1.6;
+}
+
+/* ===== FIXED HEADER ===== */
+header{
+position:fixed;
+top:0;
+width:100%;
+background:#111;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+border-bottom:1px solid #222;
+}
+
+.logo{
+font-family:'Orbitron',sans-serif;
+color:#14F195;
+font-size:18px;
+}
+
+.contract{
+font-size:12px;
+color:#aaa;
+max-width:50%;
+word-break:break-all;
+}
+
+.buy-btn{
+background:linear-gradient(90deg,#9945FF,#14F195);
+padding:8px 18px;
+border-radius:6px;
+color:#000;
+font-weight:600;
+text-decoration:none;
+}
+
+.spacer{height:80px;}
+
+/* ===== HERO ===== */
+.hero{
+text-align:center;
+padding:120px 20px 80px 20px;
+background:linear-gradient(135deg,#9945FF,#14F195);
+}
+
+.hero h1{
+font-family:'Orbitron',sans-serif;
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+max-width:800px;
+margin:auto;
+font-size:18px;
+color:#000;
+}
+
+.hero-buttons{
+margin-top:35px;
+}
+
+.hero-buttons a{
+display:inline-block;
+margin:10px;
+padding:14px 30px;
+border-radius:8px;
+font-weight:600;
+text-decoration:none;
+background:#000;
+color:#14F195;
+border:1px solid #14F195;
+transition:.3s;
+}
+
+.hero-buttons a:hover{
+background:#14F195;
+color:#000;
+}
+
+/* ===== SECTION ===== */
+section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+.section-title{
+font-size:30px;
+margin-bottom:35px;
+text-align:center;
+background:linear-gradient(90deg,#9945FF,#14F195);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.card{
+background:#161625;
+padding:25px;
+border-radius:12px;
+border:1px solid #222;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+border-color:#14F195;
+transform:translateY(-5px);
+}
+
+.card h3{
+color:#14F195;
+margin-bottom:12px;
+}
+
+.card a{
+color:#14F195;
+text-decoration:none;
+}
+
+.card a:hover{
+text-decoration:underline;
+}
+
+footer{
+background:#111;
+padding:40px 20px;
+text-align:center;
+color:#777;
+border-top:1px solid #222;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">VTA</div>
+<div class="contract">
+99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G
+</div>
+<a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G" target="_blank" class="buy-btn">
+Buy VTA
+</a>
+</header>
+
+<div class="spacer"></div>
+
+<!-- HERO MAIN -->
+<section class="hero">
+<h1>Vietera Token (VTA)</h1>
+<p>
+A fixed-supply SPL Token built on Solana with immutable authority structure and full on-chain transparency.
+</p>
+
+<div class="hero-buttons">
+<a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G" target="_blank">
+View on Solana
+</a>
+<a href="https://github.com/YOUR_GITHUB" target="_blank">
+GitHub
+</a>
+<a href="https://t.me/YOUR_TELEGRAM" target="_blank">
+Telegram
+</a>
+</div>
+</section>
+
+<!-- TOKEN INFO -->
+<section>
+<h2 class="section-title">Token Information</h2>
+<div class="grid">
+<div class="card"><h3>Total Supply</h3><p>5,000,000 VTA</p></div>
+<div class="card"><h3>Decimals</h3><p>9</p></div>
+<div class="card"><h3>Network</h3><p><a href="https://solana.com" target="_blank">Solana Mainnet</a></p></div>
+</div>
+</section>
+
+<!-- SECURITY -->
+<section>
+<h2 class="section-title">Authority Status</h2>
+<div class="grid">
+<div class="card"><h3>Mint Authority</h3><p>Revoked 🔒</p></div>
+<div class="card"><h3>Freeze Authority</h3><p>Revoked 🔒</p></div>
+<div class="card"><h3>On-Chain</h3>
+<p>
+<a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G" target="_blank">
+Verified on Explorer
+</a>
+</p>
+</div>
+</div>
+</section>
+
+<!-- SUPPORTED WALLETS -->
+<section>
+<h2 class="section-title">Supported Wallets</h2>
+<div class="grid">
+<div class="card"><h3>Phantom</h3></div>
+<div class="card"><h3>Solflare</h3></div>
+<div class="card"><h3>Backpack</h3></div>
+<div class="card"><h3>OKX Wallet</h3></div>
+<div class="card"><h3>Binance Web3 Wallet</h3></div>
+</div>
+</section>
+
+<footer>
+© 2026 Vietera Token (VTA)<br>
+All information verifiable on-chain via Solana Explorer.
+</footer>
+
+</body>
+</html>
