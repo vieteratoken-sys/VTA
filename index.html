@@ -3,180 +3,285 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VTA | Vietera Token Official</title>
-
-<meta name="description" content="VTA - Official token on Solana. Fixed supply 5,000,000. Mint & Freeze authority revoked.">
-<meta property="og:title" content="Vietera Token (VTA)">
-<meta property="og:description" content="Official website of VTA on Solana blockchain">
-<meta property="og:type" content="website">
-
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+<title>Vietera Token (VTA)</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-body { font-family: 'Orbitron', sans-serif; background: #0b0e11; }
-.card { background: #161a20; }
-.glow { box-shadow: 0 0 15px #f0b90b; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+background:#0b0e11;
+color:#fff;
+font-family:'Inter',sans-serif;
+}
+
+header{
+padding:70px 20px;
+text-align:center;
+background:radial-gradient(circle at center,#141a22,#0b0e11);
+border-bottom:1px solid #1f2937;
+}
+
+header h1{
+font-family:'Orbitron',sans-serif;
+font-size:50px;
+color:#f0b90b;
+margin-bottom:15px;
+}
+
+.contract{
+font-size:14px;
+color:#aaa;
+word-break:break-all;
+margin-bottom:30px;
+max-width:900px;
+margin-left:auto;
+margin-right:auto;
+}
+
+.buttons a{
+display:inline-block;
+margin:10px;
+padding:14px 28px;
+border-radius:8px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn-primary{
+background:#f0b90b;
+color:#000;
+}
+
+.btn-primary:hover{
+background:#ffd54f;
+}
+
+.btn-outline{
+border:1px solid #f0b90b;
+color:#f0b90b;
+}
+
+.btn-outline:hover{
+background:#f0b90b;
+color:#000;
+}
+
+section{
+padding:70px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+font-size:34px;
+margin-bottom:40px;
+text-align:center;
+color:#f0b90b;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#11161d;
+padding:30px;
+border-radius:12px;
+border:1px solid #1f2937;
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border-color:#f0b90b;
+}
+
+.card h3{
+color:#f0b90b;
+margin-bottom:12px;
+font-size:20px;
+}
+
+.card p{
+color:#ccc;
+font-size:15px;
+line-height:1.6;
+}
+
+.alt-bg{
+background:#11161d;
+}
+
+.about{
+text-align:center;
+color:#bbb;
+font-size:17px;
+line-height:1.8;
+max-width:900px;
+margin:auto;
+}
+
+.community{
+text-align:center;
+margin-top:20px;
+}
+
+.community a{
+display:inline-block;
+margin:12px 18px;
+color:#f0b90b;
+font-weight:600;
+text-decoration:none;
+font-size:16px;
+}
+
+.community a:hover{
+text-decoration:underline;
+}
+
+footer{
+background:#0b0e11;
+padding:35px 20px;
+text-align:center;
+color:#777;
+font-size:14px;
+border-top:1px solid #1f2937;
+line-height:1.6;
+}
 </style>
 </head>
 
-<body class="text-white">
+<body>
 
-<!-- HEADER -->
-<header class="fixed top-0 w-full bg-[#0b0e11] border-b border-gray-800 py-4 px-6 flex justify-between items-center z-50">
+<header>
+<h1>Vietera Token (VTA)</h1>
 
-    <div class="text-2xl font-bold text-yellow-400">VTA</div>
+<div class="contract">
+Contract Address:<br>
+99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G
+</div>
 
-    <div class="flex items-center gap-4 text-xs md:text-sm">
-        <span class="text-yellow-400 break-all">
-            99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G
-        </span>
+<div class="buttons">
+<a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G" target="_blank" class="btn-primary">View on Explorer</a>
+<a href="https://www.telegram.com" target="_blank" class="btn-outline">Telegram</a>
+<a href="https://github.com/YOUR_GITHUB" target="_blank" class="btn-outline">GitHub</a>
+</div>
 
-        <button onclick="copyContract()" 
-            class="px-3 py-1 bg-yellow-500 text-black rounded hover:scale-105 transition text-xs">
-            Copy
-        </button>
-
-        <a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G?cluster=mainnet-beta"
-           target="_blank"
-           class="px-3 py-1 border border-yellow-400 rounded text-xs hover:bg-yellow-500 hover:text-black transition">
-           Explorer
-        </a>
-    </div>
 </header>
 
+<!-- TOKEN METRICS -->
+<section>
+<h2 class="section-title">Token Metrics</h2>
 
-<!-- HERO -->
-<section class="pt-40 pb-24 text-center px-6">
-
-<h1 class="text-5xl md:text-6xl font-extrabold text-yellow-400">
-Vietera Token (VTA)
-</h1>
-
-<p class="mt-6 text-gray-400 max-w-2xl mx-auto">
-Official SPL token deployed on Solana Mainnet.
-Fixed total supply and fully decentralized control.
-</p>
-
-<div class="mt-10 flex gap-6 justify-center flex-wrap">
-
-<a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G?cluster=mainnet-beta"
-   target="_blank"
-   class="px-8 py-3 bg-yellow-500 text-black rounded font-bold glow">
-Buy VTA
-</a>
-
-<a href="https://github.com/YOUR-USERNAME/VTA-Official"
-   target="_blank"
-   class="px-8 py-3 border border-gray-600 rounded hover:border-yellow-400 transition">
-GitHub
-</a>
-
-<a href="https://t.me/YOUR_TELEGRAM"
-   target="_blank"
-   class="px-8 py-3 border border-gray-600 rounded hover:border-yellow-400 transition">
-Telegram
-</a>
-
+<div class="stats">
+<div class="card">
+<h3>Total Supply</h3>
+<p>5,000,000 VTA</p>
 </div>
 
-</section>
-
-
-<!-- TOKEN INFORMATION -->
-<section class="py-20 bg-[#111418] text-center">
-<h2 class="text-3xl font-bold text-yellow-400 mb-10">Token Information</h2>
-
-<div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 px-6">
-
-<div class="card p-8 rounded border border-gray-700">
-<h4 class="text-gray-400 text-sm">Token Name</h4>
-<p class="text-xl mt-2 text-yellow-400">Vietera Token (VTA)</p>
+<div class="card">
+<h3>Circulating Supply</h3>
+<p>5,000,000 VTA</p>
 </div>
 
-<div class="card p-8 rounded border border-gray-700">
-<h4 class="text-gray-400 text-sm">Blockchain</h4>
-<p class="text-xl mt-2 text-yellow-400">Solana Mainnet</p>
+<div class="card">
+<h3>Blockchain</h3>
+<p>Solana</p>
 </div>
 
-<div class="card p-8 rounded border border-gray-700">
-<h4 class="text-gray-400 text-sm">Total Supply</h4>
-<p class="text-xl mt-2 text-yellow-400">5,000,000 VTA</p>
+<div class="card">
+<h3>Token Standard</h3>
+<p>SPL Token</p>
 </div>
 
-<div class="card p-8 rounded border border-gray-700">
-<h4 class="text-gray-400 text-sm">Token Standard</h4>
-<p class="text-xl mt-2 text-yellow-400">SPL Token</p>
+<div class="card">
+<h3>Decimals</h3>
+<p>9</p>
 </div>
-
 </div>
 </section>
 
+<!-- SECURITY -->
+<section class="alt-bg">
+<h2 class="section-title">Security & Transparency</h2>
 
-<!-- SECURITY & VERIFICATION -->
-<section class="py-20 text-center">
-<h2 class="text-3xl font-bold text-yellow-400 mb-10">Security & Verification</h2>
-
-<div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 px-6">
-
-<div class="card p-8 rounded border border-green-600">
-<h4 class="text-gray-400 text-sm">Mint Authority</h4>
-<p class="text-xl mt-2 text-green-400 font-bold">Revoked (Disabled)</p>
+<div class="stats">
+<div class="card">
+<h3>Mint Authority</h3>
+<p>Revoked 🔒</p>
 </div>
 
-<div class="card p-8 rounded border border-green-600">
-<h4 class="text-gray-400 text-sm">Freeze Authority</h4>
-<p class="text-xl mt-2 text-green-400 font-bold">Disabled</p>
+<div class="card">
+<h3>Freeze Authority</h3>
+<p>Revoked 🔒</p>
 </div>
 
-<div class="card p-8 rounded border border-green-600 md:col-span-2">
-<h4 class="text-gray-400 text-sm">Supply Status</h4>
-<p class="text-xl mt-2 text-green-400 font-bold">
-Fixed Supply – No Further Minting Possible
-</p>
+<div class="card">
+<h3>Supply Status</h3>
+<p>Fixed – No Further Minting</p>
 </div>
 
+<div class="card">
+<h3>Verification</h3>
+<p>Fully On-Chain Transparent</p>
+</div>
 </div>
 </section>
 
+<!-- ABOUT -->
+<section>
+<h2 class="section-title">About VTA</h2>
+
+<div class="about">
+Vietera Token (VTA) is a fixed-supply digital asset deployed on the Solana blockchain.  
+The total supply is permanently capped at 5,000,000 VTA with all administrative authorities revoked.  
+
+This structure guarantees transparency, immutability, and long-term token integrity.
+</div>
+</section>
+
+<!-- ROADMAP -->
+<section class="alt-bg">
+<h2 class="section-title">Roadmap</h2>
+
+<div class="stats">
+<div class="card">
+<h3>Phase 1</h3>
+<p>Token Deployment<br>Authority Revocation<br>Supply Fixing</p>
+</div>
+
+<div class="card">
+<h3>Phase 2</h3>
+<p>Community Expansion<br>Brand Development<br>Exchange Visibility</p>
+</div>
+
+<div class="card">
+<h3>Phase 3</h3>
+<p>Utility Integration<br>Strategic Partnerships<br>Platform Growth</p>
+</div>
+</div>
+</section>
 
 <!-- COMMUNITY -->
-<section class="py-20 bg-[#111418] text-center">
-<h2 class="text-3xl font-bold text-yellow-400 mb-8">Official Channels</h2>
+<section>
+<h2 class="section-title">Community & Resources</h2>
 
-<div class="flex justify-center gap-10 flex-wrap">
-
-<a href="https://github.com/YOUR-USERNAME/VTA-Official"
-   target="_blank"
-   class="card px-10 py-6 rounded border border-gray-700 hover:border-yellow-400 transition">
-GitHub Repository
-</a>
-
-<a href="https://t.me/YOUR_TELEGRAM"
-   target="_blank"
-   class="card px-10 py-6 rounded border border-gray-700 hover:border-yellow-400 transition">
-Telegram Community
-</a>
-
+<div class="community">
+<a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub Repository</a>
+<a href="https://t.me/YOUR_TELEGRAM" target="_blank">Telegram Channel</a>
+<a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G" target="_blank">Solana Explorer</a>
 </div>
 </section>
 
-
-<!-- FOOTER -->
-<footer class="bg-[#0b0e11] border-t border-gray-800 py-12 text-center text-gray-500 text-sm">
-<p>© 2026 Vietera Token (VTA). Built on Solana.</p>
-<p class="mt-3">
-Total Supply: 5,000,000 VTA | Mint Authority: Revoked | Freeze Authority: Disabled
-</p>
+<footer>
+© 2026 Vietera Token (VTA). All rights reserved.<br>
+Built on Solana Blockchain.<br>
+This website does not constitute financial advice.
 </footer>
-
-
-<script>
-function copyContract(){
-navigator.clipboard.writeText("99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G");
-alert("Contract copied!");
-}
-</script>
 
 </body>
 </html>
