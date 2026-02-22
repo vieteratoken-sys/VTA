@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VTA Token</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif;}
+
+body{
+  background:#0b0f1a;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* Animated Background */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:linear-gradient(45deg,#9945FF,#14F195,#9945FF);
+  background-size:400% 400%;
+  animation:gradientMove 15s ease infinite;
+  z-index:-1;
+  opacity:0.15;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* Header */
+header{
+  position:fixed;
+  width:100%;
+  top:0;
+  padding:15px 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  backdrop-filter:blur(12px);
+  background:rgba(0,0,0,0.5);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  z-index:999;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:800;
+  background:linear-gradient(90deg,#9945FF,#14F195);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.token-address{
+  font-size:12px;
+  opacity:0.7;
+}
+
+.buy-btn{
+  background:linear-gradient(90deg,#9945FF,#14F195);
+  border:none;
+  padding:10px 25px;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.buy-btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 25px #14F195;
+}
+
+/* Sections */
+section{
+  padding:120px 10%;
+  text-align:center;
+}
+
+/* Hero */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:90px;
+  background:linear-gradient(90deg,#9945FF,#14F195);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+  margin-top:15px;
+  opacity:0.8;
+}
+
+.hero-buttons{
+  margin-top:30px;
+}
+
+.hero-buttons button{
+  margin:10px;
+  padding:12px 35px;
+  border-radius:30px;
+  border:1px solid #14F195;
+  background:transparent;
+  color:#14F195;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero-buttons button:hover{
+  background:#14F195;
+  color:black;
+  box-shadow:0 0 20px #14F195;
+}
+
+/* Glass Box */
+.glass{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(20px);
+  padding:50px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.1);
+  margin-top:40px;
+}
+
+/* Grid */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+.card{
+  padding:30px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.05);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 30px #9945FF;
+}
+
+/* Footer */
+footer{
+  padding:40px;
+  text-align:center;
+  opacity:0.6;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">VTA</div>
+  <div class="token-address">99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G</div>
+  <button class="buy-btn">BUY VTA</button>
+</header>
+
+<section class="hero">
+  <h1>VTA</h1>
+  <p>Solana 2022 Standard • Secure • Limited 5M Supply</p>
+  <div class="hero-buttons">
+    <button onclick="window.open('https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G?cluster=mainnet-beta')">Solana Explorer</button>
+    <button>GitHub</button>
+    <button>Telegram</button>
+  </div>
+</section>
+
+<section>
+  <div class="glass">
+    <h2>Total Supply</h2>
+    <h1 id="counter" style="margin-top:20px;font-size:60px;color:#14F195;">0</h1>
+  </div>
+</section>
+
+<section>
+  <h2>Security</h2>
+  <div class="grid">
+    <div class="card">Mint Authority Revoked</div>
+    <div class="card">Freeze Authority Revoked</div>
+    <div class="card">Ownership Renounced</div>
+  </div>
+</section>
+
+<section>
+  <h2>Supported Wallets</h2>
+  <div class="grid">
+    <div class="card">Phantom</div>
+    <div class="card">Solflare</div>
+    <div class="card">Backpack</div>
+    <div class="card">Trust Wallet</div>
+  </div>
+</section>
+
+<section>
+  <h2>Roadmap</h2>
+  <div class="glass">
+    <p>Phase 1 – Launch</p>
+    <p>Phase 2 – DEX Listing</p>
+    <p>Phase 3 – CEX Listing</p>
+    <p>Phase 4 – Ecosystem Expansion</p>
+  </div>
+</section>
+
+<footer>
+© 2026 VTA Token • Built on Solana
+</footer>
+
+<script>
+// Animated Counter
+let count = 0;
+let target = 5000000;
+let speed = 5000;
+
+let counter = document.getElementById("counter");
+
+let update = setInterval(()=>{
+  count += Math.ceil(target/100);
+  if(count >= target){
+    count = target;
+    clearInterval(update);
+  }
+  counter.innerText = count.toLocaleString() + " VTA";
+},20);
+</script>
+
+</body>
+</html>
