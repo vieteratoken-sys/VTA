@@ -3,164 +3,138 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VTA Token</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
+<title>VTA Token | Official</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
 
 body{
-  background:#0b0f1a;
-  color:white;
-  overflow-x:hidden;
+  background:#0f172a;
+  color:#fff;
+  line-height:1.6;
 }
 
-/* Animated Background */
-body::before{
-  content:"";
-  position:fixed;
-  top:0;left:0;
-  width:100%;height:100%;
-  background:linear-gradient(45deg,#9945FF,#14F195,#9945FF);
-  background-size:400% 400%;
-  animation:gradientMove 15s ease infinite;
-  z-index:-1;
-  opacity:0.15;
+a{color:#14F195;text-decoration:none;}
+
+.container{
+  width:90%;
+  max-width:1200px;
+  margin:auto;
 }
 
-@keyframes gradientMove{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
-}
-
-/* Header */
+/* HEADER */
 header{
   position:fixed;
-  width:100%;
   top:0;
-  padding:15px 40px;
+  width:100%;
+  background:rgba(15,23,42,0.95);
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  z-index:1000;
+}
+
+.nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  backdrop-filter:blur(12px);
-  background:rgba(0,0,0,0.5);
-  border-bottom:1px solid rgba(255,255,255,0.1);
-  z-index:999;
+  padding:15px 0;
 }
 
 .logo{
-  font-size:22px;
   font-weight:800;
-  background:linear-gradient(90deg,#9945FF,#14F195);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  font-size:22px;
+  color:#14F195;
 }
 
-.token-address{
-  font-size:12px;
-  opacity:0.7;
+.nav-links{
+  display:flex;
+  gap:25px;
+  font-size:14px;
 }
 
 .buy-btn{
-  background:linear-gradient(90deg,#9945FF,#14F195);
-  border:none;
-  padding:10px 25px;
-  border-radius:30px;
+  background:#14F195;
+  color:#000;
+  padding:8px 18px;
+  border-radius:6px;
   font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
 }
 
-.buy-btn:hover{
-  transform:scale(1.1);
-  box-shadow:0 0 25px #14F195;
-}
-
-/* Sections */
-section{
-  padding:120px 10%;
-  text-align:center;
-}
-
-/* Hero */
+/* HERO */
 .hero{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
+  padding-top:120px;
+  padding-bottom:80px;
+  text-align:center;
+  background:linear-gradient(135deg,#0f172a,#1e293b);
 }
 
 .hero h1{
-  font-size:90px;
-  background:linear-gradient(90deg,#9945FF,#14F195);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+  font-size:60px;
+  margin-bottom:20px;
 }
 
 .hero p{
-  margin-top:15px;
-  opacity:0.8;
+  color:#94a3b8;
 }
 
 .hero-buttons{
   margin-top:30px;
 }
 
-.hero-buttons button{
+.hero-buttons a{
   margin:10px;
-  padding:12px 35px;
-  border-radius:30px;
+  padding:10px 25px;
   border:1px solid #14F195;
-  background:transparent;
-  color:#14F195;
-  cursor:pointer;
-  transition:0.3s;
+  border-radius:6px;
 }
 
-.hero-buttons button:hover{
-  background:#14F195;
-  color:black;
-  box-shadow:0 0 20px #14F195;
+/* SECTION */
+section{
+  padding:80px 0;
 }
 
-/* Glass Box */
-.glass{
-  background:rgba(255,255,255,0.05);
-  backdrop-filter:blur(20px);
-  padding:50px;
-  border-radius:20px;
-  border:1px solid rgba(255,255,255,0.1);
-  margin-top:40px;
+.section-title{
+  font-size:32px;
+  margin-bottom:40px;
+  text-align:center;
 }
 
-/* Grid */
+/* GRID */
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:25px;
-  margin-top:40px;
 }
 
 .card{
-  padding:30px;
-  border-radius:15px;
-  background:rgba(255,255,255,0.05);
-  transition:0.4s;
+  background:#1e293b;
+  padding:25px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.05);
 }
 
-.card:hover{
-  transform:translateY(-10px);
-  box-shadow:0 0 30px #9945FF;
+.card h3{
+  margin-bottom:10px;
+  color:#14F195;
 }
 
-/* Footer */
+/* TABLE */
+.token-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.token-table td{
+  padding:12px;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
 footer{
-  padding:40px;
+  background:#0b1120;
+  padding:40px 0;
   text-align:center;
-  opacity:0.6;
-  border-top:1px solid rgba(255,255,255,0.1);
+  font-size:14px;
+  color:#94a3b8;
 }
 </style>
 </head>
@@ -168,78 +142,122 @@ footer{
 <body>
 
 <header>
-  <div class="logo">VTA</div>
-  <div class="token-address">99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G</div>
-  <button class="buy-btn">BUY VTA</button>
+  <div class="container nav">
+    <div class="logo">VTA</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#security">Security</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#contact">Community</a>
+      <a class="buy-btn" href="#">Buy VTA</a>
+    </div>
+  </div>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>VTA</h1>
-  <p>Solana 2022 Standard • Secure • Limited 5M Supply</p>
-  <div class="hero-buttons">
-    <button onclick="window.open('https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G?cluster=mainnet-beta')">Solana Explorer</button>
-    <button>GitHub</button>
-    <button>Telegram</button>
+  <div class="container">
+    <h1>VTA Token</h1>
+    <p>Solana 2022 Standard • Fixed Supply • Fully Secured</p>
+
+    <div class="hero-buttons">
+      <a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G?cluster=mainnet-beta">View on Solana</a>
+      <a href="#">GitHub</a>
+      <a href="#">Telegram</a>
+    </div>
+
+    <p style="margin-top:20px;color:#64748b;font-size:14px;">
+      Contract: 99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G
+    </p>
   </div>
 </section>
 
-<section>
-  <div class="glass">
-    <h2>Total Supply</h2>
-    <h1 id="counter" style="margin-top:20px;font-size:60px;color:#14F195;">0</h1>
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About VTA</h2>
+    <p style="text-align:center;color:#94a3b8;max-width:800px;margin:auto;">
+      VTA is a digital asset built under Solana 2022 token standard.
+      Designed for real-world ecosystem integration including online payments,
+      NFT gaming and digital asset utilities.
+    </p>
   </div>
 </section>
 
-<section>
-  <h2>Security</h2>
-  <div class="grid">
-    <div class="card">Mint Authority Revoked</div>
-    <div class="card">Freeze Authority Revoked</div>
-    <div class="card">Ownership Renounced</div>
+<!-- TOKENOMICS -->
+<section id="tokenomics">
+  <div class="container">
+    <h2 class="section-title">Tokenomics</h2>
+    <table class="token-table">
+      <tr><td>Total Supply</td><td>5,000,000 VTA</td></tr>
+      <tr><td>Standard</td><td>Solana 2022</td></tr>
+      <tr><td>Mint Authority</td><td>Revoked</td></tr>
+      <tr><td>Freeze Authority</td><td>Revoked</td></tr>
+      <tr><td>Ownership</td><td>Renounced</td></tr>
+    </table>
   </div>
 </section>
 
+<!-- WALLET & EXCHANGE -->
 <section>
-  <h2>Supported Wallets</h2>
-  <div class="grid">
-    <div class="card">Phantom</div>
-    <div class="card">Solflare</div>
-    <div class="card">Backpack</div>
-    <div class="card">Trust Wallet</div>
+  <div class="container">
+    <h2 class="section-title">Wallet & Exchange Integration</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Web3 Wallets</h3>
+        Phantom<br>Solflare<br>Backpack
+      </div>
+      <div class="card">
+        <h3>Binance Wallet</h3>
+        Compatible
+      </div>
+      <div class="card">
+        <h3>OKX Wallet</h3>
+        Compatible
+      </div>
+    </div>
   </div>
 </section>
 
-<section>
-  <h2>Roadmap</h2>
-  <div class="glass">
-    <p>Phase 1 – Launch</p>
-    <p>Phase 2 – DEX Listing</p>
-    <p>Phase 3 – CEX Listing</p>
-    <p>Phase 4 – Ecosystem Expansion</p>
+<!-- SECURITY -->
+<section id="security">
+  <div class="container">
+    <h2 class="section-title">Security & Transparency</h2>
+    <div class="grid">
+      <div class="card">Liquidity Locked</div>
+      <div class="card">No Hidden Mint Function</div>
+      <div class="card">Fully Transparent Contract</div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap">
+  <div class="container">
+    <h2 class="section-title">Roadmap</h2>
+    <div class="grid">
+      <div class="card">Phase 1 – Launch</div>
+      <div class="card">Phase 2 – DEX Listing</div>
+      <div class="card">Phase 3 – CEX Listing</div>
+      <div class="card">Phase 4 – Ecosystem Expansion</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Community</h2>
+    <p style="text-align:center;">
+      Telegram • Twitter • GitHub
+    </p>
   </div>
 </section>
 
 <footer>
-© 2026 VTA Token • Built on Solana
+© 2026 VTA Token • Built on Solana Blockchain
 </footer>
-
-<script>
-// Animated Counter
-let count = 0;
-let target = 5000000;
-let speed = 5000;
-
-let counter = document.getElementById("counter");
-
-let update = setInterval(()=>{
-  count += Math.ceil(target/100);
-  if(count >= target){
-    count = target;
-    clearInterval(update);
-  }
-  counter.innerText = count.toLocaleString() + " VTA";
-},20);
-</script>
 
 </body>
 </html>
