@@ -59,9 +59,17 @@ text-decoration:none;
 .hero{
 text-align:center;
 padding:120px 20px 80px 20px;
-background:linear-gradient(135deg,#9945FF,#14F195);
+background:linear-gradient(-45deg,#9945FF,#14F195,#0f0c29,#24243e);
+background-size:400% 400%;
+animation:solanaMove 12s ease infinite;
+position:relative;
+overflow:hidden;
 }
-
+@keyframes solanaMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
 .hero h1{
 font-family:'Orbitron',sans-serif;
 font-size:48px;
