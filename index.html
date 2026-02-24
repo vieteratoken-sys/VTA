@@ -385,6 +385,15 @@ display:flex;
 align-items:center;
 gap:20px;
 }
+/* Smooth hide animation */
+header{
+transition:transform .35s ease;
+}
+
+/* Ẩn header */
+header.hide{
+transform:translateY(-100%);
+}
 </style>
 </head>
 
@@ -559,6 +568,33 @@ With strategic vision and innovation at its core, Vietera aims to build a modern
 © 2026 Vietera Token (VTA)<br>
 All information verifiable on-chain via Solana Explorer.
 </footer>
+<script>
+let lastScroll = 0;
 
+window.addEventListener("scroll", function () {
+
+    if (window.innerWidth > 768) return; // chỉ mobile
+
+    const currentScroll = window.pageYOffset;
+    const header = document.querySelector("header");
+
+    // luôn hiện nếu ở top
+    if (currentScroll <= 0) {
+        header.classList.remove("hide");
+        return;
+    }
+
+    // scroll xuống -> ẩn
+    if (currentScroll > lastScroll) {
+        header.classList.add("hide");
+    } 
+    // scroll lên -> hiện
+    else {
+        header.classList.remove("hide");
+    }
+
+    lastScroll = currentScroll;
+});
+</script>
 </body>
 </html>
