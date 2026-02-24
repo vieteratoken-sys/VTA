@@ -3,138 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VTA Token | Official</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<title>Vietera Token (VTA)</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-  background:#0f172a;
-  color:#fff;
-  line-height:1.6;
+margin:0;
+font-family:Arial, sans-serif;
+background:radial-gradient(circle at 20% 30%, rgba(20,241,149,0.15), transparent 40%),
+radial-gradient(circle at 80% 70%, rgba(153,69,255,0.15), transparent 40%),
+#050816;
+color:white;
 }
 
-a{color:#14F195;text-decoration:none;}
-
-.container{
-  width:90%;
-  max-width:1200px;
-  margin:auto;
-}
-
-/* HEADER */
+/* ===== FIXED HEADER ===== */
 header{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:rgba(15,23,42,0.95);
-  border-bottom:1px solid rgba(255,255,255,0.1);
-  z-index:1000;
-}
-
-.nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 0;
+position:fixed;
+top:0;
+width:100%;
+background:#111;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+border-bottom:1px solid #222;
 }
 
 .logo{
-  font-weight:800;
-  font-size:22px;
-  color:#14F195;
+font-family:'Orbitron',sans-serif;
+color:#14F195;
+font-size:18px;
 }
 
-.nav-links{
-  display:flex;
-  gap:25px;
-  font-size:14px;
+.contract{
+font-size:12px;
+color:#aaa;
+max-width:50%;
+word-break:break-all;
 }
 
 .buy-btn{
-  background:#14F195;
-  color:#000;
-  padding:8px 18px;
-  border-radius:6px;
-  font-weight:600;
+background:linear-gradient(90deg,#9945FF,#14F195);
+padding:8px 18px;
+border-radius:6px;
+color:#000;
+font-weight:600;
+text-decoration:none;
 }
 
-/* HERO */
+.spacer{height:80px;}
+
+/* ===== HERO ===== */
 .hero{
-  padding-top:120px;
-  padding-bottom:80px;
-  text-align:center;
-  background:linear-gradient(135deg,#0f172a,#1e293b);
+text-align:center;
+padding:120px 20px 80px 20px;
+background:linear-gradient(-45deg,#9945FF,#14F195,#0f0c29,#24243e);
+background-size:400% 400%;
+animation:solanaMove 12s ease infinite;
+position:relative;
+overflow:hidden;
 }
-
+@keyframes solanaMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
 .hero h1{
-  font-size:60px;
-  margin-bottom:20px;
+font-family:'Orbitron',sans-serif;
+font-size:48px;
+margin-bottom:20px;
 }
 
 .hero p{
-  color:#94a3b8;
+max-width:800px;
+margin:auto;
+font-size:18px;
+color:#000;
 }
 
 .hero-buttons{
-  margin-top:30px;
+margin-top:35px;
 }
 
 .hero-buttons a{
-  margin:10px;
-  padding:10px 25px;
-  border:1px solid #14F195;
-  border-radius:6px;
+display:inline-block;
+margin:10px;
+padding:14px 30px;
+border-radius:8px;
+font-weight:600;
+text-decoration:none;
+background:#000;
+color:#14F195;
+border:1px solid #14F195;
+transition:.3s;
 }
 
-/* SECTION */
+.hero-buttons a:hover{
+background:#14F195;
+color:#000;
+}
+
+/* ===== SECTION ===== */
 section{
-  padding:80px 0;
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
 }
 
 .section-title{
-  font-size:32px;
-  margin-bottom:40px;
-  text-align:center;
+font-size:30px;
+margin-bottom:35px;
+text-align:center;
+background:linear-gradient(90deg,#9945FF,#14F195);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-/* GRID */
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
 }
 
 .card{
-  background:#1e293b;
-  padding:25px;
-  border-radius:10px;
-  border:1px solid rgba(255,255,255,0.05);
+background:#161625;
+padding:25px;
+border-radius:12px;
+border:1px solid #222;
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+border-color:#14F195;
+transform:translateY(-5px);
 }
 
 .card h3{
-  margin-bottom:10px;
-  color:#14F195;
+color:#14F195;
+margin-bottom:12px;
 }
 
-/* TABLE */
-.token-table{
-  width:100%;
-  border-collapse:collapse;
+.card a{
+color:#14F195;
+text-decoration:none;
 }
 
-.token-table td{
-  padding:12px;
-  border-bottom:1px solid rgba(255,255,255,0.1);
+.card a:hover{
+text-decoration:underline;
 }
 
 footer{
-  background:#0b1120;
-  padding:40px 0;
-  text-align:center;
-  font-size:14px;
-  color:#94a3b8;
+background:#111;
+padding:40px 20px;
+text-align:center;
+color:#777;
+border-top:1px solid #222;
+}
+.hero-logo{
+width:130px;
+max-width:90%;
+margin-bottom:25px;
+display:block;
+margin-left:auto;
+margin-right:auto;
+opacity:0.95;
+filter:drop-shadow(0 0 15px rgba(20,241,149,0.6))
+       drop-shadow(0 0 30px rgba(153,69,255,0.4));
 }
 </style>
 </head>
@@ -142,121 +179,156 @@ footer{
 <body>
 
 <header>
-  <div class="container nav">
-    <div class="logo">VTA</div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#tokenomics">Tokenomics</a>
-      <a href="#security">Security</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#contact">Community</a>
-      <a class="buy-btn" href="#">Buy VTA</a>
-    </div>
-  </div>
+<div class="logo">VTA</div>
+<div class="contract">
+99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G
+</div>
+<a href="https://web3.okx.com/vi/token/solana/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G" target="_blank" class="buy-btn">
+Buy on OKX
+</a>
 </header>
 
-<!-- HERO -->
+<div class="spacer"></div>
+
+<!-- HERO MAIN -->
 <section class="hero">
-  <div class="container">
-    <h1>VTA Token</h1>
-    <p>Solana 2022 Standard • Fixed Supply • Fully Secured</p>
+<img src="https://d2eioyamun8mp1.cloudfront.net/images/1771755301928_aO5L52KPWO.png"
+class="hero-logo"
+alt="VTA Logo">
+<h1>Vietera Token (VTA)</h1>
+<p>
+A fixed-supply SPL Token built on Solana with immutable authority structure and full on-chain transparency.
+</p>
 
-    <div class="hero-buttons">
-      <a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G?cluster=mainnet-beta">View on Solana</a>
-      <a href="#">GitHub</a>
-      <a href="#">Telegram</a>
-    </div>
-
-    <p style="margin-top:20px;color:#64748b;font-size:14px;">
-      Contract: 99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G
-    </p>
-  </div>
+<div class="hero-buttons">
+<a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G" target="_blank">
+Solana
+</a>
+<a href="https://github.com/vieteratoken-sys/VTA-OS" target="_blank">
+GitHub
+</a>
+<a href="https://t.me/vtacommunity" target="_blank">
+Telegram
+</a>
+</div>
 </section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <h2 class="section-title">About VTA</h2>
-    <p style="text-align:center;color:#94a3b8;max-width:800px;margin:auto;">
-      VTA is a digital asset built under Solana 2022 token standard.
-      Designed for real-world ecosystem integration including online payments,
-      NFT gaming and digital asset utilities.
-    </p>
-  </div>
-</section>
-
-<!-- TOKENOMICS -->
-<section id="tokenomics">
-  <div class="container">
-    <h2 class="section-title">Tokenomics</h2>
-    <table class="token-table">
-      <tr><td>Total Supply</td><td>5,000,000 VTA</td></tr>
-      <tr><td>Standard</td><td>Solana 2022</td></tr>
-      <tr><td>Mint Authority</td><td>Revoked</td></tr>
-      <tr><td>Freeze Authority</td><td>Revoked</td></tr>
-      <tr><td>Ownership</td><td>Renounced</td></tr>
-    </table>
-  </div>
-</section>
-
-<!-- WALLET & EXCHANGE -->
+<!-- TOKEN INFO -->
 <section>
-  <div class="container">
-    <h2 class="section-title">Wallet & Exchange Integration</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Web3 Wallets</h3>
-        Phantom<br>Solflare<br>Backpack
-      </div>
-      <div class="card">
-        <h3>Binance Wallet</h3>
-        Compatible
-      </div>
-      <div class="card">
-        <h3>OKX Wallet</h3>
-        Compatible
-      </div>
-    </div>
-  </div>
+<h2 class="section-title">Token Information</h2>
+<div class="grid">
+<div class="card"><h3>Total Supply</h3><p>5,000,000 VTA</p></div>
+<div class="card"><h3>Decimals</h3><p>9</p></div>
+<div class="card"><h3>Network</h3><p><a href="https://solana.com" target="_blank">Solana Mainnet</a></p></div>
+</div>
 </section>
 
 <!-- SECURITY -->
-<section id="security">
-  <div class="container">
-    <h2 class="section-title">Security & Transparency</h2>
-    <div class="grid">
-      <div class="card">Liquidity Locked</div>
-      <div class="card">No Hidden Mint Function</div>
-      <div class="card">Fully Transparent Contract</div>
-    </div>
-  </div>
+<section>
+<h2 class="section-title">Authority Status</h2>
+<div class="grid">
+<div class="card"><h3>Mint Authority</h3><p>Revoked 🔒</p></div>
+<div class="card"><h3>Freeze Authority</h3><p>Revoked 🔒</p></div>
+<div class="card"><h3>On-Chain</h3>
+<p>
+<a href="https://explorer.solana.com/address/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G" target="_blank">
+Verified on Explorer
+</a>
+</p>
+</div>
+</div>
 </section>
 
-<!-- ROADMAP -->
-<section id="roadmap">
-  <div class="container">
-    <h2 class="section-title">Roadmap</h2>
-    <div class="grid">
-      <div class="card">Phase 1 – Launch</div>
-      <div class="card">Phase 2 – DEX Listing</div>
-      <div class="card">Phase 3 – CEX Listing</div>
-      <div class="card">Phase 4 – Ecosystem Expansion</div>
-    </div>
-  </div>
+<!-- SUPPORTED WALLETS -->
+<section>
+<h2 class="section-title">Supported Wallets</h2>
+<div class="grid">
+<div class="card"><h3><a href="https://phantom.com" target="_blank"> Phantom Wallet</a></h3></div>
+<div class="card"><h3><a href="https://www.solflare.com/" target="_blank"> Solflare Wallet</a></h3></div>
+<div class="card"><h3><a href="https://solana.com/vi/solana-wallets" target="_blank"> Solana Wallet</a></h3></div>
+<div class="card"><h3><a href="https://web3.okx.com/join/KINGBTC99999" target="_blank">OKX Wallet</a></h3></div>
+<div class="card">
+       <h3> <a href="https://binance.com" target="_blank"> Binance Web3 Wallet </a> </h3></div>
+</div>
+</section>
+<!-- ABOUT VIETERA -->
+<section>
+<h2 class="section-title">About Vietera</h2>
+<p style="text-align:center; max-width:900px; margin:auto; color:#ccc;">
+Vietera is a technology-driven enterprise committed to accelerating digital transformation and delivering innovative solutions in the Industry 4.0 era. 
+With strategic vision and innovation at its core, Vietera aims to build a modern technology ecosystem that enhances competitiveness for businesses and partners globally.
+</p>
 </section>
 
-<!-- COMMUNITY -->
-<section id="contact">
-  <div class="container">
-    <h2 class="section-title">Community</h2>
-    <p style="text-align:center;">
-      Telegram • Twitter • GitHub
-    </p>
-  </div>
+<!-- VISION & MISSION -->
+<section>
+<h2 class="section-title">Vision & Mission</h2>
+<div class="grid">
+<div class="card">
+<h3>Vision</h3>
+<p>To become a leading digital technology provider in Vietnam and international markets, delivering intelligent, efficient, and sustainable solutions for the digital economy.</p>
+</div>
+<div class="card">
+<h3>Mission</h3>
+<p>
+• Provide advanced technology solutions<br>
+• Support digital transformation<br>
+• Optimize operational efficiency<br>
+• Develop high-quality tech talent
+</p>
+</div>
+</div>
 </section>
 
+<!-- CORE BUSINESS AREAS -->
+<section>
+<h2 class="section-title">Core Business Areas</h2>
+<div class="grid">
+<div class="card"><h3>Digital Transformation</h3></div>
+<div class="card"><h3>Software & Platforms</h3></div>
+<div class="card"><h3>AI & Big Data</h3></div>
+<div class="card"><h3>Cloud Computing</h3></div>
+<div class="card"><h3>Cybersecurity</h3></div>
+</div>
+</section>
+
+<!-- VTA ECOSYSTEM -->
+<section>
+<h2 class="section-title">VTA Ecosystem</h2>
+<div class="grid">
+<div class="card">
+<h3>Service Payments</h3>
+<p>Use VTA for technology services with transparent blockchain transactions and exclusive discounts.</p>
+</div>
+<div class="card">
+<h3>Reward System</h3>
+<p>Earn VTA through participation, loyalty programs, and ecosystem contribution incentives.</p>
+</div>
+<div class="card">
+<h3>Staking</h3>
+<p>Stake VTA to receive periodic rewards and support ecosystem growth initiatives.</p>
+</div>
+<div class="card">
+<h3>Governance</h3>
+<p>Token holders can participate in voting and strategic development decisions.</p>
+</div>
+</div>
+</section>
+
+<!-- FUTURE DEVELOPMENT -->
+<section>
+<h2 class="section-title">Future Development</h2>
+<div class="grid">
+<div class="card"><h3>Exchange Listings</h3></div>
+<div class="card"><h3>Mobile & Wallet Integration</h3></div>
+<div class="card"><h3>DeFi Expansion</h3></div>
+<div class="card"><h3>NFT & Metaverse</h3></div>
+<div class="card"><h3>Global Partnerships</h3></div>
+</div>
+</section>
 <footer>
-© 2026 VTA Token • Built on Solana Blockchain
+© 2026 Vietera Token (VTA)<br>
+All information verifiable on-chain via Solana Explorer.
 </footer>
 
 </body>
