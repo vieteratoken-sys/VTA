@@ -193,19 +193,66 @@ transform:translateY(-3px);
 box-shadow:0 0 30px rgba(20,241,149,0.7),
            0 0 60px rgba(153,69,255,0.5);
 }
+       header{
+position:fixed;
+top:0;
+width:100%;
+background:#111;
+padding:15px 30px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+z-index:999;
+border-bottom:1px solid #222;
+}
+
+.menu{
+display:flex;
+gap:30px;
+}
+
+.menu a{
+text-decoration:none;
+color:#aaa;
+font-weight:500;
+transition:.3s;
+}
+
+.menu a:hover{
+color:#14F195;
+}
+
+.header-right{
+display:flex;
+align-items:center;
+gap:20px;
+}
 </style>
 </head>
 
 <body>
 
 <header>
+
 <div class="logo">VTA</div>
-<div class="contract">
-99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G
+
+<nav class="menu">
+  <a href="#about">About</a>
+  <a href="#ecosystem">Ecosystem</a>
+</nav>
+
+<div class="header-right">
+  <div class="contract">
+    99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G
+  </div>
+
+  <a href="https://web3.okx.com/vi/token/solana/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G"
+     target="_blank"
+     class="buy-btn">
+    Buy on OKX
+  </a>
 </div>
-<a href="https://web3.okx.com/vi/token/solana/99hLf1BHfHKf2eUQbnwcaURf3kBqeqhAAdgV84jfiu8G" target="_blank" class="buy-btn">
-Buy on OKX
-</a>
+
 </header>
 
 <div class="spacer"></div>
