@@ -394,6 +394,38 @@ transition:transform .35s ease;
 header.hide{
 transform:translateY(-100%);
 }
+       /* PARTNERS */
+.partners{
+text-align:center;
+padding:60px 20px;
+}
+
+.partner-logos{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.partner-logos img{
+height:60px;
+opacity:0.8;
+transition:.3s;
+}
+
+.partner-logos img:hover{
+opacity:1;
+transform:scale(1.08);
+}
+
+/* mobile */
+@media (max-width:768px){
+.partner-logos img{
+height:45px;
+}
+}
 </style>
 </head>
 
@@ -535,7 +567,33 @@ With strategic vision and innovation at its core, Vietera aims to build a modern
 <div class="card"><h3>Cybersecurity</h3></div>
 </div>
 </section>
+<!-- PARTNERS -->
+<section class="partners">
 
+<h2 class="section-title">Strategic Partners</h2>
+<p class="partners-sub">Trusted technology and ecosystem collaborators</p>
+
+<div class="partner-grid">
+
+<a href="https://solana.com" target="_blank" class="partner-card">
+<img src="https://cryptologos.cc/logos/solana-sol-logo.png" alt="Solana">
+</a>
+
+<a href="https://okx.com" target="_blank" class="partner-card">
+<img src="https://cryptologos.cc/logos/okx-okb-logo.png" alt="OKX">
+</a>
+
+<a href="https://phantom.app" target="_blank" class="partner-card">
+<img src="https://seeklogo.com/images/P/phantom-logo-4F3B8B7B0C-seeklogo.com.png" alt="Phantom">
+</a>
+
+<a href="https://github.com" target="_blank" class="partner-card">
+<img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+</a>
+
+</div>
+
+</section>
 <!-- VTA ECOSYSTEM -->
 <section>
 <h2 class="section-title">VTA Ecosystem</h2>
